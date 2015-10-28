@@ -15,7 +15,7 @@ timezone: Europe/London
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.gregjs.com
 root: /
-permalink: :category/:year-:month-:day/:title/
+permalink: :category/:year/:title/
 permalink_defaults:
 
 # Directory
@@ -36,7 +36,7 @@ external_link: true # Open external links in new tab
 filename_case: 1
 render_drafts: true
 post_asset_folder: true
-relative_link: true
+relative_link: false
 future: true
 highlight:
   enable: true
@@ -47,10 +47,6 @@ highlight:
 # Category & Tag
 default_category: javascript
 category_map:
-- javascript
-- life
-- vim
-- linux
 tag_map:
 
 # Date / Time format
@@ -69,6 +65,9 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: apollo2
+
+# Disqus
+disqus_shortname: gregjs
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
