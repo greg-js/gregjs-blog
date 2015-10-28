@@ -1,0 +1,77 @@
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: gregJS
+subtitle: Your pal gregJS on JavaScript, Linux, vim and life
+description: My personal blog
+author: Gregory J. Scheerlinck
+email: greg@gregjs.com
+language: en
+timezone: Europe/London
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://blog.gregjs.com
+root: /
+permalink: :category/:year-:month-:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: draft
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 1
+render_drafts: true
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: true
+
+# Category & Tag
+default_category: javascript
+category_map:
+- javascript
+- life
+- vim
+- linux
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 5
+pagination_dir: page
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: apollo2
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: heroku
+  repo: dokku@gregjs.com:blog
