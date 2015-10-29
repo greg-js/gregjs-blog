@@ -6,6 +6,7 @@ tags:
 date: 2015-10-29 01:15:16
 ---
 
+This pretty much sums up my opinion about ternaries:
 
 ``` javascript
 var Ternary = function(nested) {
@@ -25,5 +26,3 @@ var aNestedTernary = new Ternary(true);
 aNormalTernary.is(); // awesome
 aNestedTernary.is(); // the devil
 ```
-&nbsp;
-This pretty much sums up my opinion about ternaries.

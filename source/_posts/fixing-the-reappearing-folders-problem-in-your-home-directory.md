@@ -6,11 +6,11 @@ tags:
 date: 2015-10-28 01:23:42
 ---
 
-{% asset_img my-home-dir.png My fixed home dir %}
-
 When I saw someone on Reddit asking about a series of folders constantly reappearing in their home directory, I replied with a quick [link to the relevant Arch wiki article](https://wiki.archlinux.org/index.php/Xdg_user_directories).
 
 Judging from the amount of upvotes that got, and from my own struggles with this annoying problem a few months back, I guess this has quite a few people dumbfounded. So allow me to explain in some more detail what exactly the problem is, and how to fix it.
+
+{% asset_img my-home-dir.png My fixed home dir %}
 
 <!-- more -->
 
