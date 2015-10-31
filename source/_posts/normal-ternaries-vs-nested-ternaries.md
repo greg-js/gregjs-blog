@@ -9,10 +9,10 @@ date: 2015-10-29 01:15:16
 This pretty much sums up my opinion about ternaries:
 
 ``` javascript
-var Ternary = function(nested) {
+var Ternary = function(isNested) {
   return {
     is: function() {
-      return (nested) ? 'the devil' : 'awesome';
+      return (isNested) ? 'the devil' : 'awesome';
     }
   };
 };
@@ -20,7 +20,8 @@ var Ternary = function(nested) {
 // something like `size = (a < 10) ? 'small' : 'large'`
 var aNormalTernary = new Ternary(false);
 
-// think `size = (a < 10) ? (a < 5) ? (a < 0) ? 'negative' : 'tiny' : 'small' : 'large'`
+// think `size = (a < 10) ? (a < 5) ? (a < 0) ? 'negative'
+//               : 'tiny' : 'small' : 'large'`
 var aNestedTernary = new Ternary(true);
 
 aNormalTernary.is(); // awesome
