@@ -3,7 +3,7 @@ categories:
   - vim
 tags:
   - vim
-  - javascript
+  - js
   - react
   - es6
   - open source
