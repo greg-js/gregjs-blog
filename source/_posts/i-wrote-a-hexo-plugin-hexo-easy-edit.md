@@ -1,4 +1,4 @@
-title: 'I wrote a new Hexo plugin: hexo-easy-edit'
+title: 'I wrote a Hexo plugin: hexo-easy-edit'
 categories: javascript
 tags:
   - hexo

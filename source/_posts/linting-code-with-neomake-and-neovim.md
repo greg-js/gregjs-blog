@@ -43,7 +43,7 @@ Next, install Neomake, using whatever plugin manager you prefer (I like [vim-plu
 
 However, here's what to add to your vim config file so Neomake runs automatically whenever you enter or save a buffer containing a JavaScript file (delete the BufEnter if you only want it to run upon writing a file, which is recommended):
 
-{% codeblock lang:vim line_number:false init.vim/.nvimrc %}
+{% codeblock lang:vimscript line_number:false init.vim/.nvimrc %}
 autocmd! BufWritePost,BufEnter * Neomake
 {% endcodeblock %}
 
@@ -51,7 +51,7 @@ Neomake *should* work now (if it doesn't, do some debugging by setting `let g:ne
 
 Well, you have to call it yourself. If you set it up like explained above, you'll get them in the locations window, which you can call with `:lopen` and close with `:lclose`. You can also go to a specific error by calling `:ll #` with # being the error number. But an easier solution would likely be to add this to your vim config:
 
-{% codeblock lang:vim line_number:false init.vim/.nvimrc %}
+{% codeblock line_number:false init.vim/.nvimrc %}
 let g:neomake_open_list = 2
 {% endcodeblock %}
 
@@ -61,7 +61,7 @@ We're not done yet though. What if you want to pass extra arguments to your lint
 
 The answer to those issues is to redefine the maker. Here's how I set mine up. Note how the `args` array contains all the arguments in order. The name of the file to be linted will be added automatically at the end, but if you want to put it somewhere else, use `%:p`. The reporter you should use and the errorformat string will depend on the output of your linter but you don't have to look it up yourself, just look it up [here](https://github.com/benekastah/neomake/tree/master/autoload/neomake/makers/ft). Anyway, here's my setup for my jscs linter:
 
-{% codeblock lang:vim line_number:false init.vim/.nvimrc %}
+{% codeblock line_number:false init.vim/.nvimrc %}
 let g:neomake_javascript_jscs_maker = {
     \ 'exe': 'jscs',
     \ 'args': ['--no-color', '--preset', 'airbnb', '--reporter', 'inline', '--esnext'],
@@ -73,7 +73,7 @@ let g:neomake_javascript_enabled_makers = ['jscs']
 
 Lastly, the signs inserted into your gutter by Neomake may or may not look nice depending on what font you've got installed. Unfortunately, it didn't look all that great on mine, so I changed the symbols to a simple `W` for warnings and `E` for errors:
 
-{% codeblock lang:vim line_number:false init.vim/.nvimrc %}
+{% codeblock line_number:false init.vim/.nvimrc %}
 let g:neomake_warning_sign = {
   \ 'text': 'W',
   \ 'texthl': 'WarningMsg',
