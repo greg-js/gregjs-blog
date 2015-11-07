@@ -57,7 +57,7 @@ let g:neomake_open_list = 2
 
 This will open the window automatically when Neomake is run, but without moving your cursor. Now you can run `:ll #` to move to errors or just `:ll` to go to the first one. When you've fixed all errors and save, the window will close automatically. Neat :-)
 
-We're not done yet though. What if you want to pass extra arguments to your linter program? FOr example, I like to write my JS using Babel, JSX and ES6, so I want to use the `--esnext` flag. I might also want to change my default preset (which will be used if there is no `.jscsrc` present in the root folder of the project).
+We're not done yet though. What if you want to pass extra arguments to your linter program? For example, I like to write my JS using Babel, JSX and ES6, so I want to use the `--esnext` flag. I might also want to change my default preset (which will be used if there is no `.jscsrc` present in the root folder of the project).
 
 The answer to those issues is to redefine the maker. Here's how I set mine up. Note how the `args` array contains all the arguments in order. The name of the file to be linted will be added automatically at the end, but if you want to put it somewhere else, use `%:p`. The reporter you should use and the errorformat string will depend on the output of your linter but you don't have to look it up yourself, just look it up [here](https://github.com/benekastah/neomake/tree/master/autoload/neomake/makers/ft). Anyway, here's my setup for my jscs linter:
 
