@@ -47,7 +47,7 @@ However, here's what to add to your vim config file so Neomake runs automaticall
 autocmd! BufWritePost,BufEnter * Neomake
 {% endcodeblock %}
 
-Neomake *should* work now (if it doesn't, do some debugging by setting `let g:neomake_verbose=3` and/or `let g:neomake_logfile=/tmp/error.log` and inspecting the output). Warning and error symbols should appear in your gutter if errors are found. But where's the error window?
+Neomake *should* work now (if it doesn't, do some debugging by setting `let g:neomake_verbose=3` and/or `let g:neomake_logfile='/tmp/error.log'` and inspecting the output). Warning and error symbols should appear in your gutter if errors are found. But where's the error window?
 
 Well, you have to call it yourself. If you set it up like explained above, you'll get them in the locations window, which you can call with `:lopen` and close with `:lclose`. You can also go to a specific error by calling `:ll #` with # being the error number. But an easier solution would likely be to add this to your vim config:
 
