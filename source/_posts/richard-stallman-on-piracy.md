@@ -28,7 +28,7 @@ If you don't believe that copying not approved by the publisher is just like kid
 And in his speech last week, he mentioned this to illustrate this point (paraphrased):
 
 {% blockquote Richard Stallman %}
-When someone asks me for my opinion on piracy, I tell them I don't like it, send the coast guard.
+When people ask me for my opinion on piracy, I tell them I don't like it, send the coast guard.
 
 When they say they were talking about movie piracy, I respond that I liked the first Pirates of the Caribbean.
 {% endblockquote %}
