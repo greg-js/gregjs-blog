@@ -9,7 +9,7 @@ tags:
 
 Since I got back from Belgium last week, I've been stuck in a bit of a rut, GitHub-wise. I finished my hexo plugin so I had to start looking for something else to do while I finish up [my reading](https://github.com/getify/You-Dont-Know-JS).
 
-First I started building a Reddit bot, but after a few hours I saw that someone else had already done exactly what I'd wanted to do. I didn't feel like continuing writing Python anyway -- and the node helper libraries aren't as well-developed -- so I let project go.
+First I started building a Reddit bot, but after a few hours I saw that someone else had already done exactly what I'd wanted to do. I didn't feel like continuing writing Python anyway -- and the node helper libraries aren't as well-developed -- so I let the project go.
 
 Then I figured I'd just fix some Hexo issues. It looked like I was making some headway solving what I thought I had identified as a glaring bug in the code.
 
