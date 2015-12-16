@@ -8,7 +8,8 @@ tags:
 date: 2015-11-03 17:09:05
 ---
 
-*also: **[Linting code with Neomake, Neovim and ESLint](/vim/2015/linting-code-with-neovim-and-neomake-eslint-edition/)** *
+*also: * **[Linting code with Neovim and Neomake, ESLint edition](/vim/2015/linting-code-with-neovim-and-neomake-eslint-edition/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Lint as you type with Neovim and Neomake](/vim/2015/lint-as-you-type-with-neovim-and-neomake/)**
 
 I've been using Neovim for a while now and absolutely love it. One of the major advantages it has over regular vim is its asynchronous job processing functionality.
 

@@ -8,6 +8,8 @@ tags:
 date: 2015-11-13 17:01:49
 ---
 
+*also:* **[Linting code with Neomake and Neovim](/vim/2015/linting-code-with-neomake-and-neovim)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Lint as you type with Neovim and Neomake](/vim/2015/lint-as-you-type-with-neovim-and-neomake/)**
 
 [Ten days ago, I wrote](vim/2015/linting-code-with-neomake-and-neovim) about how I set up the [Neomake](https://github.com/benekastah/neomake) plugin for Neovim and how I linted my JavaScript code using the [JSCS linter](http://jscs.info/).
 
