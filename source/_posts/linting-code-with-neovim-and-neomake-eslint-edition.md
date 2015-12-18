@@ -1,6 +1,7 @@
 title: Linting code with Neovim and Neomake - ESLint edition
 categories: vim
 tags:
+  - linting
   - js
   - neovim
   - style

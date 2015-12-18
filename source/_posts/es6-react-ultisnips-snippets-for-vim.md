@@ -2,6 +2,7 @@ title: ES6 React UltiSnips snippets for vim
 categories:
   - vim
 tags:
+  - snippets
   - vim
   - js
   - react

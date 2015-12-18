@@ -1,6 +1,7 @@
 title: 'Lint as you type with Neovim and Neomake'
 categories: vim
 tags:
+  - linting
   - neovim
   - async
   - js

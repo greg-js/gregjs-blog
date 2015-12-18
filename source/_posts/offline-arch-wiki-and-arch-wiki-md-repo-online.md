@@ -2,7 +2,7 @@ title: offline-arch-wiki and arch-wiki-md-repo online
 categories: javascript
 tags:
   - linux
-  - arch
+  - arch linux
   - js
   - open source
 date: 2015-12-14 14:34:59

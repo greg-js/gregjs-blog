@@ -2,7 +2,7 @@ title: Fixing the reappearing folders problem in your home directory
 categories: linux
 tags:
   - linux
-  - arch
+  - arch linux
 date: 2015-10-28 01:23:42
 ---
 

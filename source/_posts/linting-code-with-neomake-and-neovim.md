@@ -2,6 +2,7 @@ title: Linting code with Neomake and Neovim
 categories: vim
 tags:
   - vim
+  - linting
   - neovim
   - style
   - js

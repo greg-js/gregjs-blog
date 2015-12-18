@@ -1,6 +1,7 @@
 title: Hexo tag plugin snippets for everyone
 categories: vim
 tags:
+  - snippets
   - open source
   - vim
   - hexo
