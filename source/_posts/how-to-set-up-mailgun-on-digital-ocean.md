@@ -7,6 +7,7 @@ tags:
 date: 2015-10-31 02:50:09
 ---
 
+_also:_ **[Forwarding mail to your Gmail account with Mailgun](/linux/2015/forwarding-mail-to-your-gmail-account-with-mailgun/)**
 
 Mailgun is an awesome e-mail service that makes it super easy for developers to automate e-mail sending. I'm not going to spend much time singing its praises here. Just [check it out for yourself](http://www.mailgun.com). Suffice it to say that if you've ever thought about programmatically sending, receiving or tracking e-mail, using just about any programming language under the sun, you *really* should consider using Mailgun.
 
