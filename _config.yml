@@ -13,7 +13,7 @@ timezone: Europe/London
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.gregjs.com
+url: http://www.gregjs.com
 root: /
 permalink: :category/:year/:title/
 permalink_defaults:
@@ -23,6 +23,7 @@ source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
+blog_dir: blog
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -60,6 +61,8 @@ time_format: HH:mm:ss
 ## Set per_page to 0 to disable pagination
 per_page: 8
 pagination_dir: page
+archive_generator:
+  per_page: 15
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
@@ -73,4 +76,4 @@ disqus_shortname: gregjs
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: heroku
-  repo: dokku@gregjs.com:blog
+  repo: dokku@gregjs.com:www
