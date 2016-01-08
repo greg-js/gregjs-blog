@@ -72,6 +72,13 @@ theme: apollo2
 # Disqus
 disqus_shortname: gregjs
 
+# rss
+feed:
+  type: atom
+  path: rss.xml
+  limit: 0
+  hub:
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
