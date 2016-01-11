@@ -1,14 +1,14 @@
 {
   "name": "gregJS_blog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "3.2.0-beta.2"
   },
   "dependencies": {
     "hexo": "3.2.0-beta.2",
+    "hexo-cli-extras": "^1.0.0",
     "hexo-deployer-heroku": "0.0.3",
-    "hexo-easy-edit": "^1.2.1",
     "hexo-generator-archive": "^0.1.2",
     "hexo-generator-blog": "^0.0.2",
     "hexo-generator-category": "^0.1.2",
