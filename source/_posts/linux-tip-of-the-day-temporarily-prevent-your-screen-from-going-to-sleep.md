@@ -29,7 +29,7 @@ fi
 xset s off -dpms
 
 echo "Preventing screen sleep for $1 minutes"
-(sleep ${1}m && xset +dpms xset s on) &
+(sleep ${1}m && xset s on +dpms) &
 {% endcodeblock %}
 
 <!-- more -->
