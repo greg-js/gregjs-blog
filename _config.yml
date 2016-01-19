@@ -67,7 +67,7 @@ archive_generator:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: apollo2
+theme: apollo-like
 
 # Disqus
 disqus_shortname: gregjs
