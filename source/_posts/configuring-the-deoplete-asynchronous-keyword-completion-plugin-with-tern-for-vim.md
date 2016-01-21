@@ -117,8 +117,6 @@ Lastly, I also set up a `gb` keybinding for moving the cursor straight to a vari
 
 ## Done
 
-I haven't talked about introducing your own sources in this article as I haven't done so myself yet, but I might write another post about that if or when I get to it.
-
-But either way, if you followed this, you should have deoplete and tern-for-vim working quite nicely (and speedily) together. Isn't it beautiful?
+I haven't talked about introducing your own sources in this article as I haven't done so myself yet, but I might write another post about that if or when I get to it. But either way, if you followed this, you should have deoplete and tern-for-vim working quite nicely (and speedily) together. Isn't it beautiful?
 
 {% asset_img beautiful.png Another autocompletion example %}
