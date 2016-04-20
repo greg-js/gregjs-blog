@@ -9,10 +9,15 @@ tags:
 date: 2015-11-13 17:01:49
 ---
 
-*also:* **[Linting code with Neomake and Neovim](/vim/2015/linting-code-with-neomake-and-neovim)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Lint as you type with Neovim and Neomake](/vim/2015/lint-as-you-type-with-neovim-and-neomake/)**
+*Related:*
+* [Linting code with Neomake and Neovim](/vim/2015/linting-code-with-neomake-and-neovim)
+* [Lint as you type with Neovim and Neomake](/vim/2015/lint-as-you-type-with-neovim-and-neomake/)
 
-[Ten days ago, I wrote](vim/2015/linting-code-with-neomake-and-neovim) about how I set up the [Neomake](https://github.com/benekastah/neomake) plugin for Neovim and how I linted my JavaScript code using the [JSCS linter](http://jscs.info/).
+{% raw %}
+<hr />
+{% endraw %}
+
+[Ten days ago, I wrote](/vim/2015/linting-code-with-neomake-and-neovim) about how I set up the [Neomake](https://github.com/benekastah/neomake) plugin for Neovim and how I linted my JavaScript code using the [JSCS linter](http://jscs.info/).
 
 While that worked alright for me, I kept running into weird bugs where JSCS would tell me there was a problem with my code, but the error message would simply display as "undefined". I didn't have the time to figure out what exactly was wrong, so I ended up switching to ESLint instead and it's been smooth sailing ever since. I'll explain how to set it up in this post.
 

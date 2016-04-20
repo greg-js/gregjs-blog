@@ -9,8 +9,13 @@ tags:
 date: 2015-12-15 18:13:37
 ---
 
-*also:* **[Linting code with Neomake and Neovim](/vim/2015/linting-code-with-neomake-and-neovim)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Linting code with Neovim and Neomake, ESLint edition](/vim/2015/linting-code-with-neovim-and-neomake-eslint-edition)**
+*Related:*
+* [Linting code with Neomake and Neovim](/vim/2015/linting-code-with-neomake-and-neovim)
+* [Linting code with Neovim and Neomake, ESLint edition](/vim/2015/linting-code-with-neovim-and-neomake-eslint-edition)
+
+{% raw %}
+<hr />
+{% endraw %}
 
 An exchange with commenter flndr8 on [my first Neomake post](/vim/2015/linting-code-with-neomake-and-neovim) inspired me to talk a little bit about 'lint-as-you-type' functionality in Neovim.
 
