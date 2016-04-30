@@ -7,6 +7,12 @@ tags:
 - npm
 ---
 
+**Note**: Kyle from [kmkeen.com](http://kmkeen.com) pointed me to an existing project which solves the same problem this project was trying to solve. It's super fast and Python-based, [check it out](http://kmkeen.com/arch-wiki-lite/). Read on to read about `arch-wiki-man` if you prefer a Node-based solution or want a somewhat fancier menu.
+
+{% raw %}
+<hr />
+{% endraw %}
+
 I got round to finishing my [command-line Arch Wiki reader](https://www.npmjs.com/package/arch-wiki-man) the other day. Basically, it comes with a dependency on my [`arch-wiki-md-repo`](https://www.npmjs.com/package/arch-wiki-md-repo), which gives you a local (frequently and automatically updated) copy of the entire (English) Arch Wiki in markdown format. It also gives you an `awman` command (as in `arch-wiki-man`) to `man` or `apropos` the wiki. This works by querying a local database and then converting markdown to [troff](https://en.wikipedia.org/wiki/Troff) on the fly, saving it to a temporary file and spawning a `man` process to open it.
 
 {% asset_img helpscreen.png image title %}
