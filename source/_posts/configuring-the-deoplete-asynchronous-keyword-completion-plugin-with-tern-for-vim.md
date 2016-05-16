@@ -31,7 +31,7 @@ Well, Tern offers JavaScript code-analysis and brings non-IDE editors like vim a
 
 ## Initializing Deoplete and tern-for-vim
 
-You should use one of the many plugin managers to install the plugins. Shougo made one (of course he did) called [neocomplete](https://github.com/Shougo/neobundle.vim), but personally I use [vim-plug](https://github.com/junegunn/vim-plug), so I'll be using that syntax.
+You should use one of the many plugin managers to install the plugins. Shougo made one (of course he did) called [neobundle](https://github.com/Shougo/neobundle.vim), but personally I use [vim-plug](https://github.com/junegunn/vim-plug), so I'll be using that syntax.
 
 Installing is a breeze with a manager like vim-plug:
 
