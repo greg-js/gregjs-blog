@@ -1,4 +1,4 @@
-title: "Writing a wrapper to immediately disown a process: A better way of playing videos from the terminal"
+title: "Playing videos with mpv and a wrapper for immediately disowning a process"
 categories: linux
 tags:
   - bash
@@ -10,7 +10,7 @@ Oof, two months without updates! This is starting to look like a typical develop
 
 Years ago, I discovered VLC and started using it for all my video watching, as it is in my opinion by far the best option on Windows. When I switched to Linux full-time though, I found out there is another piece of open source software that does the same thing, and by golly, it does it even better: {% link mpv https://mpv.io mpv website %}
 
-{% asset_img mpv.website.png mpv website %}
+{% asset_img mpv.website.jpg mpv website %}
 
 If you've read this blog before, you probably know I love the command line, and that's exactly why I ended up using mpv for all my videos. VLC is still great, mind you, but configuring it can be time-consuming with its many dialog windows - trust me, a long time ago, someone actually paid me to write tips for a VLC blog..
 
@@ -24,7 +24,7 @@ You might also use the same simple wrapper for running other scripts/programs in
 
 The problem the wrapper solves is that of mpv spawning a child process when run from the command line. It then displays a lot of information in the current terminal window while the video plays (see the screenshot below). This can be very useful in some cases, but sometimes you just want to play one or a number of videos in a new window, and be free to close the spawning terminal window without also closing the video.
 
-{% asset_img mpv.png mpv command line information %}
+{% asset_img mpv.jpg mpv command line information %}
 
 So here's what I use (of course I made this an executable script and put it in a folder that was added to my `$PATH`, in my case `~/bin/`):
 
