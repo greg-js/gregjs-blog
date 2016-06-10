@@ -72,6 +72,14 @@ theme: apollo-like
 # Disqus
 disqus_shortname: gregjs
 
+# Minification
+html_minifier:
+  exclude:
+
+clean_css:
+  exclude:
+    - '*.min.css'
+
 # rss
 feed:
   type: atom
