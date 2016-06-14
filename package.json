@@ -7,12 +7,14 @@
   },
   "scripts": {
     "webpack": "webpack --config ./themes/apollo-like/webpack.config.js",
-    "build": "hexo clean && npm run webpack && hexo generate",
+    "copy-db": "cp ./db.json ../api",
+    "build": "hexo clean && npm run webpack && hexo generate && npm run copy-db",
     "serve:prod": "npm run build && hexo serve",
     "serve": "npm run webpack && hexo serve",
     "deploy": "npm run build && hexo deploy"
   },
   "dependencies": {
+    "es6-promise": "^3.2.1",
     "hexo": "^3.2.0",
     "hexo-clean-css": "0.0.2",
     "hexo-cli-extras": "^1.0.3",
@@ -28,7 +30,8 @@
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
-    "preact": "^4.8.0"
+    "preact": "^4.8.0",
+    "universal-fetch": "0.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
