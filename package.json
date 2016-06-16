@@ -1,16 +1,17 @@
 {
   "name": "gregJS_blog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "hexo": {
     "version": "3.2.0"
   },
   "scripts": {
-    "webpack": "webpack --config ./themes/apollo-like/webpack.config.js",
+    "webpack": "webpack --config ./themes/gregjs-theme/webpack.config.js",
     "copy-db": "cp ./db.json ../api",
     "build": "hexo clean && npm run webpack && hexo generate && npm run copy-db",
     "serve:prod": "npm run build && hexo serve",
     "serve": "npm run webpack && hexo serve",
+    "dev": "npm run serve",
     "deploy": "npm run build && hexo deploy"
   },
   "dependencies": {
