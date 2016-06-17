@@ -97,21 +97,19 @@ Also note that I wrapped the tern settings in an if-statement. The reason is tha
 
 ## Setting up deoplete to use `<Tab>`
 
-The default key for autocompletion is `<Ctrl-x><Ctrl-o>` and `<Ctrl-P>` for going up in the list and `<Ctrl-N>` for going down. At least, I think it is, as I changed it to exclusively use `<Tab>` pretty much immediately. Here's how to do it:
+The default key for autocompletion is `<Ctrl-x><Ctrl-o>` and `<Ctrl-P>` for going up in the list and `<Ctrl-N>` for going down. At least, I think it is, as I changed it to exclusively use `<Tab>` pretty much immediately.
+
+I originally had a pretty ugly hack here since remapping `<Tab>` in insert mode breaks actual tabs, but commenter `TabComplete` (I doubt that's their real name though) came up with a much better solution so here's how to do it the *right* way:
 
 {% codeblock lang:vim keys.vimrc %}
 " deoplete tab-complete
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
-" ,<Tab> for regular tab
-inoremap <Leader><Tab> <Space><Space>
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 {% endcodeblock %}
 
 Line 2 sets `<Tab>` up to do what you most likely want it to do -- autocomplete and cycle from top to bottom.
-
-This leads to a bit of an issue though! If `<Tab>` is the autocompletion key, it no longer inserts actual tabs (which, in my case is equivalent to two spaces). Rather than come up with some ingenious solution to this problem, I simply remapped `<Leader><Tab>` to `<Space><Space>`. My leader is comma, so comma-tab gives me a normal tab - easy peasy.
 
 Lastly, I also set up a `gb` keybinding for moving the cursor straight to a variable definition using Tern's JS code analysis engine.
 

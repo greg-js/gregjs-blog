@@ -2,7 +2,6 @@ title: How to set up Mailgun on Digital Ocean
 categories: linux
 tags:
   - vps
-  - linux
   - mailgun
 date: 2015-10-31 02:50:09
 ---

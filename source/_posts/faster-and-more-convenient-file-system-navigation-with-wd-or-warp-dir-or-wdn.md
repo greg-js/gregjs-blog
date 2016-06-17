@@ -1,4 +1,4 @@
-title: Faster and more stylish file system navigation with wd or warp-dir -- or wdn?
+title: "Faster and more convenient file system navigation with wd or warp-dir -- or wdn?"
 date: 2016-06-16 14:08:46
 categories: linux
 tags:
