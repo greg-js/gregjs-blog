@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 source/_drafts/
+themes/*/source/js/archive.js
+themes/*/source/js/app.js
