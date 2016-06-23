@@ -52,7 +52,7 @@ date_format: MMM Do
 time_format: HH:mm
 
 # Pagination
-per_page: 8
+per_page: 5
 pagination_dir: page
 archive_generator:
   per_page: 15
