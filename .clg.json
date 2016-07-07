@@ -1,3 +1,14 @@
 {
-  "sourceDirs": "source/_posts"
+  "sourceDirs": "source/_posts",
+  "newDirs": {
+    "post": {
+      "dir": "source/_posts",
+      "metadata": {
+        "category": "javascript",
+        "tags": ""
+      },
+      "assetDir": true
+    },
+    "draft": "source/_drafts"
+  }
 }
