@@ -27,7 +27,7 @@ My setup does exactly what it should do now, so I thought I'd take a few moments
 
 ### Step 1: Install prerequisites
 
-You need [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim), [Neomake](https://github.com/neovim/neovim/wiki/Installing-Neovim) and [ESLint](https://github.com/eslint/eslint).
+You need [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim), [Neomake](https://github.com/neomake/neomake) and [ESLint](https://github.com/eslint/eslint).
 
 ### Step 2: Set up Neomake
 

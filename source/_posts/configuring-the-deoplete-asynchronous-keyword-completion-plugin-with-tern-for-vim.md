@@ -7,6 +7,13 @@ tags:
   - dotfiles
 ---
 
+*The information contained within this article is not necessarily wrong, but please note that I wrote an update to this article in September 2016:*
+* [Neovim, Deoplete, JSPC, UltiSnips and Tern: A config for kickass autocompletion](vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/)
+
+{% raw %}
+<hr />
+{% endraw %}
+
 If you're a vim-user and you have at least a couple of vim plugins installed, chances are you've heard of [Shougo](https://github.com/shougo). While [Tim Pope](https://github.com/tpope) is still probably the most prolific and well-known author of widely used vim plugins, Shougo is way up there along with him.
 
 Why am I talking about Shougo? Well, like many vim-lovers I have made the move to Neovim, and Shougo had announced over half a year ago that he would create something the people in the Neovim-camp have been waiting for: a high-performing autocompletion plugin that takes advantage of Neovim's built-in asynchronous job control.
