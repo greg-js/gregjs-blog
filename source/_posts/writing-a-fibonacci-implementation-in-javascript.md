@@ -131,7 +131,7 @@ function tailCall6(n, a, b) {
 }
 {% endcodeblock %}
 
-I hope this explains what a tail call is, and why `return fibNaive(n - 2) + fibNaive(n - 1)` is not a tail call, but `return fibLoop(n - 1, a + b, a)` *is* a tail call. But why is it important?
+I hope this explains what a tail call is, and why `return fibNaive(n - 2) + fibNaive(n - 1)` is not a tail call, but `return fibRecursive(n - 1, a + b, a)` *is* a tail call. But why is it important?
 
 Well, as noted above, ES6 introduced *proper tail calls* or *tail call optimization*. Go read more about the how and the why elsewhere if you're interested, but suffice it to say here on this blog that it causes the JS engine (assuming it supports this particular ES6 feature) to essentially treat a recursive function more like an iterative loop **as long as you are using tail calls**. So no more creating huge amounts of execution contexts, which means that a well-implemented recursive loop using tail calls will run very quickly indeed.
 
@@ -147,7 +147,34 @@ function fibRecursive(n, a = 1, b = 0) {
 }
 {% endcodeblock %}
 
-Maybe this looks a little weird at first sight, but if you look more closely, you'll find that it's just like the loop from before. `fibRecursive(n)` initializes the loop with ES6 default arguments `a = 1` and `b = 0` (thanks to commenter Emilio Srougo for helping me clean up the code some more!), and then with every iteration of the loop, `n` becomes `n--`, `a` becomes `a + b` and `b` becomes `a`. Upon reaching the base case (`n === 0` here), `b` is returned, which, just like in the iterative function, resolves to the `n`th Fibonacci number. And it all happens in an instant!
+Maybe this looks a little weird at first sight, but if you look more closely, you'll find that it's just like the loop from before. `fibRecursive(n)` initializes the loop with ES6 default arguments `a = 1` and `b = 0`, and then with every iteration of the loop, `n` becomes `n--`, `a` becomes `a + b` and `b` becomes `a`. Upon reaching the base case (`n === 0` here), `b` is returned, which, just like in the iterative function, resolves to the `n`th Fibonacci number. And it all happens in an instant!
+
+ES6 is old news by now, really, but it's still new (or new-*ish*) for a whole lot of people. Case in point: this article used to show an ES5 implementation of `fibRecursive`, until **Emilio Srougo** pointed out to me in the comments that I could drop the initialization function by using [ES6 default parameters](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+
+Just to show you again how ES6 can really help make your code more readable and expressive, here's the ES5 implementation of the above function. No default parameters means you need an initialization function:
+
+{% codeblock lang:javascript %}
+function fibRecursiveES5(n) {
+  return fibLoop(n, 1, 0);
+}
+
+function fibLoop(n, a, b) {
+  if (n === 0) {
+    return b;
+  } else {
+    return fibLoop(n - 1, a + b, a);
+  }
+}
+{% endcodeblock %}
+
+Alternatively, you could do away with the initialization function and add this ugliness to the loop:
+
+{% codeblock lang:javascript %}
+a = a || 1;
+b = b || 0;
+{% endcodeblock %}
+
+But you have to admit, default parameters are so much nicer, aren't they?
 
 ## Conclusion
 
