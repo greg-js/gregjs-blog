@@ -138,20 +138,16 @@ Well, as noted above, ES6 introduced *proper tail calls* or *tail call optimizat
 So what does this proper recursive Fibonacci function look like in JavaScript? Here it is, and do note the tail call, without which it wouldn't work!
 
 {% codeblock lang:javascript %}
-function fibRecursive(n) {
-  return fibLoop(n, 1, 0);
-}
-
-function fibLoop(n, a, b) {
+function fibRecursive(n, a = 1, b = 0) {
   if (n === 0) {
     return b;
   } else {
-    return fibLoop(n - 1, a + b, a);
+    return fibRecursive(n - 1, a + b, a);
   }
 }
 {% endcodeblock %}
 
-Maybe this looks a little weird at first sight, but if you look more closely, you'll find that it looks an awful lot like the iterative loop from before. `fibRecursive(n)` simply initializes the inner loop with `a = 1` and `b = 0`, and then with every iteration of the inner loop, `n` becomes `n--`, `a` becomes `a + b` and `b` becomes `a`. Upon reaching the base case (`n === 0` here), `b` gets returned, which, just like in the iterative function, resolves to the `n`th Fibonacci number. And thanks to tail call optimization, it happens in an instant!
+Maybe this looks a little weird at first sight, but if you look more closely, you'll find that it's just like the loop from before. `fibRecursive(n)` initializes the loop with ES6 default arguments `a = 1` and `b = 0` (thanks to commenter Emilio Srougo for helping me clean up the code some more!), and then with every iteration of the loop, `n` becomes `n--`, `a` becomes `a + b` and `b` becomes `a`. Upon reaching the base case (`n === 0` here), `b` is returned, which, just like in the iterative function, resolves to the `n`th Fibonacci number. And it all happens in an instant!
 
 ## Conclusion
 
