@@ -72,7 +72,6 @@ Every recursive function has a **base case** and a **recursive step**.
 
 * For `fibNaive` the base case is the `(n < 2)` condition of the if-statement resolving to `true` and thus returning `0`
 * For `fibNaiveZero` the base case is the `(n < 2)` condition of the ternary resolving to `true` and returning `n`
-
 * For both `fibNaive` and `fibNaiveZero` the recursive step has the function returning a sum of the results of calling itself on `n - 1` and `n - 2`
 
 To drive home the point, let's write out exactly how `fibNaive` performs its recursive step again and again until it reaches its base case:
