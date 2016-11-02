@@ -32,7 +32,7 @@ Now, I'm not going to go over the importance of this sequence, not only for comp
 
 Write a function that returns the `n`th Fibonacci number.
 
-I will leave the questions of whether the first Fibonacci number is 0 or 1 and whether the `n`th number should be zero- or one-indexed up to you. Adjusting the the following implementations to take these trivial differences into account should be mostly trivial.
+I will leave the questions of whether the first Fibonacci number is 0 or 1 and whether the `n`th number should be zero- or one-indexed up to you. Adjusting the following implementations to take these trivial differences into account should be mostly trivial.
 
 I will also assume `n` to always be a positive number. Calling a Fibonacci function on a negative number, or even (depending on your implementation and assumptions) on 0 is meaningless and should really return undefined. Actually implementing this would lead us too far astray though so let us keep it simple and assume these constraints on our input `n`.
 
@@ -76,7 +76,7 @@ Every recursive function has a **base case** and a **recursive step**.
 
 To drive home the point, let's write out exactly how `fibNaive` performs its recursive step again and again until it reaches its base case:
 
-Suppose `n` is 4. `fibNaive(4)` returns `fibNaive(2) + fibNaive(3)`. Now, the first term resolves to `fibNaive(0) + fibNaive(1)`, which is `1 + 1 == 2`. This 2 is then added to the second term in the original split (`fibNaive(3)`, which of course resolves to `fibNaive(1) + fibNaive(2)`. That 2 from earlier plus `fibNaive(1) == 1` makes 3 and now we add that to `fibNaive(2) == fibNaive(1) + fibNaive(1) == 2`. All in all what you get is `1 + 1 + 1 + 1 + 1 == 5`. Scroll up and verify that this is indeed the correct answer.
+Suppose `n` is 4. `fibNaive(4)` returns `fibNaive(2) + fibNaive(3)`. Now, the first term resolves to `fibNaive(0) + fibNaive(1)`, which is `1 + 1 == 2`. This 2 is then added to the second term in the original split (`fibNaive(3)`, which of course resolves to `fibNaive(1) + fibNaive(2)`. That 2 from earlier plus `fibNaive(1) == 1` makes 3 and now we add that to `fibNaive(2) == fibNaive(0) + fibNaive(1) == 2`. All in all what you get is `1 + 1 + 1 + 1 + 1 == 5`. Scroll up and verify that this is indeed the correct answer.
 
 So if this solution works, then why is it naive? Well, try finding the 40th number using this function. Takes a little while, doesn't it? And don't even think about running it on higher numbers because it is terribly, terribly, terribly inefficient.
 
@@ -123,13 +123,13 @@ function fibIterativeES5(n) {
 }
 {% endcodeblock %}
 
-Again, this is exactly the same as the ES6 solution above, but it looks a bit more mystifying because we have to use a temporary variable -- or at least, that's how it looks to me but maybe that's just because Array/object destructuring is **definitely** one of the features I absolutely adore about the somewhat mixed bag that is ES6! It just makes certain things a whole lot easier.
+Again, this is exactly the same as the ES6 solution above, but it looks a bit more mystifying because we have to use a temporary variable. Array/object destructuring is **definitely** one of my favorite ES6 features! It just makes certain things so much easier.
 
 ## A recursive solution
 
-And now here we are, back to the quest for the `n`th number in the Fibonacci sequence using a recursive function. Before we get to it though, I simply must bore you once again by saying saying a few words about [tail call optimization](http://www.2ality.com/2015/06/tail-call-optimization.html).
+And now here we are, back to the quest for the `n`th number in the Fibonacci sequence using a recursive function. Before we get to it though, I simply must bore you once again by saying a few words about [tail call optimization](http://www.2ality.com/2015/06/tail-call-optimization.html).
 
-*Tail call optimization* or *proper tail calls* is another one of the new features in ES6 that are actually really useful (though I suppose this one isn't quite as sexy as some of the more often talked about ones). Excuse my glossing over of some rather deep and sophisticated concepts, but I'm trying to keep this short, so think about a tail call as what happens when a function returns and calls a function as its *very last* action. It's easier to explain with some examples:
+*Tail call optimization* or *proper tail calls* is another one of the new features in ES6 (though I suppose this one isn't quite as sexy). Excuse my glossing over of some rather deep and sophisticated concepts, but I'm trying to keep this post short, so simply think about a tail call as what happens when a function returns and calls a function as its *very last* action. It's easier to explain with some examples:
 
 {% codeblock lang:javascript %}
 function tailCall() {
@@ -165,7 +165,7 @@ function tailCall6(n, a, b) {
 
 I hope this explains what a tail call is, and why `return fibNaive(n - 2) + fibNaive(n - 1)` is *not* a tail call, but `return fibRecursive(n - 1, a + b, a)` *is* a tail call. But why is it important?
 
-Please do read more about the how and the why on sites like MDN if you're interested, but suffice it to say here that it causes the JS engine (assuming it supports this particular ES6 feature) to essentially treat a recursive function with proper tail calls kind of like an iterative loop **as long as you are using tail calls**. The reason is that stacking huge amounts of execution contexts on top of one another is no longer necessary because all the information is packed into that last function call and nothing from previous iterations needs to be kept in memory.
+Please do read more [about the how and the why of tail call optimization](http://www.door3.com/insights/es6-recursion-tail-recursion) if you're interested, but suffice it to say here that it causes the JS engine (assuming it supports this particular ES6 feature) to essentially treat a recursive function with proper tail calls kind of like an iterative loop **as long as you are using tail calls**. The reason is that stacking huge amounts of execution contexts on top of one another is no longer necessary because all the information is packed into that last function call and nothing from previous iterations needs to be kept in memory.
 
 This means that a well-implemented recursive loop using tail calls will run very quickly indeed. But what does such a proper recursive Fibonacci function look like in JavaScript? Here it is, and do note the tail call, without which it wouldn't work!
 
@@ -208,7 +208,11 @@ a = a || 1;
 b = b || 0;
 {% endcodeblock %}
 
-But you have to admit, the ES6 implementation is so much nicer, isn't it?
+But you have to admit, the ES6 implementation is so much nicer, isn't it? Here it is, one more time, just to allow for easy comparison:
+
+{% codeblock lang:javascript %}
+const fibSexy = (n, a = 1, b = 0) => (n === 0) ? b : fibSexy(n - 1, a + b, a);
+{% endcodeblock %}
 
 ## Conclusion
 
